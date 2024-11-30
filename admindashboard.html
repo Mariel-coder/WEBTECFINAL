@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminstyle.css">
+</head>
+<body>
+      <div class="dashboard">
+        <h1>Admin Dashboard</h1>
+        <h2>Manage Products</h2>
+    
+        <!-- Product List -->
+        <table="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="product-list">
+            <!-- Example products -->
+            <tr>
+              <td>1</td>
+              <td class="editable" contenteditable="true">Product 1</td>
+              <td class="editable" contenteditable="true">$10.00</td>
+              <td>
+                <button onclick="saveProduct(this)">Save</button>
+                <button onclick="deleteProduct(this)">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="editable" contenteditable="true">Product 2</td>
+              <td class="editable" contenteditable="true">$20.00</td>
+              <td>
+                <button onclick="saveProduct(this)">Save</button>
+                <button onclick="deleteProduct(this)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <!-- Add New Product -->
+        <h2>Add Product</h2>
+        <form id="add-product-form">
+          <label for="product-name">Product Name</label>
+          <input type="text" id="product-name" name="product-name" placeholder="Enter Product Name" required>
+    
+          <label for="product-price">Product Price</label>
+          <input type="number" id="product-price" name="product-price" placeholder="Enter Product Price" required>
+    
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+    
+      <script src="scripts.js"></script>
+    </body>
+    </html>
+    
